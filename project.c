@@ -257,17 +257,6 @@ int main() {
 
     } while (pilihan != 8);
 
-=======
 
-void dzikir() {
-    printf("Subhaanallah\n");
-}
-
-int main(){
-    for(int i=1; i<=33; i++){
-        dzikir();
-    }
-    
->>>>>>> da1e9e765664cd2549f55dc63b2a3d75af1ac796
     return 0;
 }
