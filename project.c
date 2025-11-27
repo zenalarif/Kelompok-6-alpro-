@@ -1,5 +1,7 @@
 #include <stdio.h>
+
 int main(){
-    printf("ujj");
-    kkkkkkkk
+    printf("jenal pukimai");
+    
+    return 0;
 }
