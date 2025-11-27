@@ -1,7 +1,13 @@
 #include <stdio.h>
 
+void dzikir() {
+    printf("Subhaanallah");
+}
+
 int main(){
-    printf("jenal pukimai");
+    for(int i=1; i<=33; i++){
+        dzikir();
+    }
     
     return 0;
 }
