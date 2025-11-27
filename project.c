@@ -1,5 +1,4 @@
 #include <stdio.h>
-<<<<<<< HEAD
 #include <string.h>
 #include <stdlib.h>
 
@@ -256,7 +255,6 @@ int main() {
         }
 
     } while (pilihan != 8);
-
 
     return 0;
 }
