@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void dzikir() {
-    printf("Subhaanallah");
+    printf("Subhaanallah\n");
 }
 
 int main(){
