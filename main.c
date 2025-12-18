@@ -1,19 +1,19 @@
-#include "gym.h"
+#include "header.h"
 
 int main() {
     int pilihan;
-    loadData(); // Muat data dari file saat program mulai
+    loadData(); // Load data dari file saat program start
 
     do {
-        printf("\n=== SISTEM MANAJEMEN GYM ===\n");
+        printf("\n======= Sistem Informasi Administrasi Keanggotaan Fitness =====\n");
         printf("1. Tambah Anggota\n");
         printf("2. Tampilkan Semua Anggota\n");
-        printf("3. Cari Anggota (Searching)\n");
-        printf("4. Urutkan Anggota by Nama (Sorting)\n");
-        printf("5. Update Data Anggota\n");
+        printf("3. Cari Anggota\n");
+        printf("4. Urutkan Anggota\n");
+        printf("5. Update / Perpanjang Member\n");
         printf("6. Hapus Anggota\n");
-        printf("7. Cek Member Kadaluarsa\n");
-        printf("8. Rekap Keuangan\n");
+        printf("7. Cek Status Kadaluarsa\n");
+        printf("8. Laporan Keuangan\n");
         printf("0. Keluar\n");
         printf("Pilihan: ");
         scanf("%d", &pilihan);
@@ -27,7 +27,7 @@ int main() {
             case 6: hapusMember(); break;
             case 7: cekKadaluarsa(); break;
             case 8: rekapKeuangan(); break;
-            case 0: printf("Terima kasih!\n"); break;
+            case 0: printf("Aplikasi ditutup.\n"); break;
             default: printf("Pilihan tidak valid.\n");
         }
     } while (pilihan != 0);
