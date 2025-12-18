@@ -16,6 +16,7 @@ int main() {
         printf("8. Laporan Keuangan\n");
         printf("0. Keluar\n");
         printf("Pilihan: ");
+        printf("=====================================================================\n");
         scanf("%d", &pilihan);
 
         switch (pilihan) {
