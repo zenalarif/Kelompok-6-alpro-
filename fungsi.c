@@ -80,7 +80,9 @@ void tambahMember() {
     Member m;
     m.id = (jumlahMember == 0) ? 1 : daftarMember[jumlahMember-1].id + 1;
 
-    printf("\n--- Tambah Anggota ---\n");
+    printf("================================================================\n");
+    printf("||                     TAMPILKAN ANGGOTA                      ||\n");
+    printf("================================================================\n");
     printf("Nama Member: ");
     scanf(" %[^\n]s", m.nama);
     
