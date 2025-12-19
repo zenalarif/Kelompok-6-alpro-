@@ -118,6 +118,9 @@ void tambahMember() {
 }
 
 void tampilkanSemuaMember() {
+    printf("========================================================================\n");
+    printf("||                     DATA ANGGOTA FITNES JUNISA                       ||\n");
+    printf("========================================================================\n");
     if (jumlahMember == 0) {
         printf("Data kosong.\n");
         return;
