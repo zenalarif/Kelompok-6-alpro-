@@ -144,7 +144,9 @@ void tampilkanSemuaMember() {
 
 void updateMember() {
     int id, found = 0;
-    printf("\n--- Update / Perpanjang ---\n");
+    printf("========================================================================\n");
+    printf("||                     UPDATE / PERPANJANG MEMBER                      ||\n");
+    printf("========================================================================\n");
     printf("Masukkan ID member: ");
     scanf("%d", &id);
 
