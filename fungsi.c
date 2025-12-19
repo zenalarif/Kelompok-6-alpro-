@@ -145,7 +145,7 @@ void tampilkanSemuaMember() {
 void updateMember() {
     int id, found = 0;
     printf("========================================================================\n");
-    printf("||                     DATA ANGGOTA FITNES JUNISA                       ||\n");
+    printf("||                     UPDATE / PERPANJANG MEMBER                      ||\n");
     printf("========================================================================\n");
     printf("Masukkan ID member: ");
     scanf("%d", &id);
