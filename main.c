@@ -5,17 +5,23 @@ int main() {
     loadData(); // Load data dari file saat program start
 
     do {
-        printf("\n======= Sistem Informasi Administrasi Keanggotaan Fitness =====\n");
-        printf("1. Tambah Anggota\n");
-        printf("2. Tampilkan Semua Anggota\n");
-        printf("3. Cari Anggota\n");
-        printf("4. Urutkan Anggota\n");
-        printf("5. Update / Perpanjang Member\n");
-        printf("6. Hapus Anggota\n");
-        printf("7. Cek Status Kadaluarsa\n");
-        printf("8. Laporan Keuangan\n");
-        printf("0. Keluar\n");
-        printf("Pilihan: ");
+        printf("\n");
+        printf("========================================================\n");
+        printf("||        SISTEM ADMINISTRASI FITNESS CENTER           ||\n");
+        printf("========================================================\n");
+        printf("||  [1] TAMBAH ANGGOTA                                 ||\n");
+        printf("||  [2] TAMPILKAN SEMUA ANGGOTA                        ||\n");
+        printf("||  [3] CARI ANGGOTA                                   ||\n");
+        printf("||  [4] URUTKAN ANGGOTA                                ||\n");
+        printf("||  [5] UPDATE / PERPANJANG MEMBER                     ||\n");
+        printf("||  [6] HAPUS ANGGOTA                                  ||\n");
+        printf("||  [7] CEK STATUS KEDALUWARSA                         ||\n");
+        printf("||  [8] LAPORAN KEUANGAN                               ||\n");
+        printf("||  [0] KELUAR                                         ||\n");
+        printf("========================================================\n");
+        printf("||                 JUNISA FITNESS                      ||\n");
+        printf("========================================================\n\n");
+        printf("PILIH MENU : ");
         scanf("%d", &pilihan);
 
         switch (pilihan) {
