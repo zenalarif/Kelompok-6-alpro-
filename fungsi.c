@@ -108,7 +108,6 @@ void tambahMember() {
         // Bulanan expired +30 hari otomatis
         hitungTanggalOtomatis(m.tglDaftar, m.tglHabis, 30);
     }
-
     daftarMember[jumlahMember] = m;
     jumlahMember++;
     saveData();
