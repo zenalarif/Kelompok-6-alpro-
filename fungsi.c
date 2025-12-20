@@ -81,7 +81,7 @@ void tambahMember() {
     m.id = (jumlahMember == 0) ? 1 : daftarMember[jumlahMember-1].id + 1;
 
     printf("================================================================\n");
-    printf("||                     TAMPILKAN ANGGOTA                      ||\n");
+    printf("||                     TAMBAHKAN ANGGOTA                      ||\n");
     printf("================================================================\n");
     printf("Nama Member: ");
     scanf(" %[^\n]s", m.nama);
@@ -109,7 +109,6 @@ void tambahMember() {
         m.biaya = 150000;
         // Bulanan expired +30 hari otomatis
         hitungTanggalOtomatis(m.tglDaftar, m.tglHabis, 30);
-        printf("-> Expired otomatis diatur ke: %s\n", m.tglHabis);
     }
 
     daftarMember[jumlahMember] = m;
@@ -118,9 +117,9 @@ void tambahMember() {
 }
 
 void tampilkanSemuaMember() {
-    printf("========================================================================\n");
-    printf("||                     DATA ANGGOTA FITNES JUNISA                       ||\n");
-    printf("========================================================================\n");
+    printf("=======================================================================================\n");
+    printf("||                     DATA ANGGOTA FITNES JUNISA                                    ||\n");
+    printf("======================================================================================\n");
     if (jumlahMember == 0) {
         printf("Data kosong.\n");
         return;
@@ -192,6 +191,9 @@ void updateMember() {
 
 void hapusMember() {
     int id, found = 0;
+    printf("========================================================================\n");
+    printf("||                        HAPUS ANGGOTA                               ||\n");
+    printf("========================================================================\n");
     printf("Masukkan ID member yang akan dihapus: ");
     scanf("%d", &id);
 
@@ -212,12 +214,15 @@ void hapusMember() {
 
 // --- SEARCHING & SORTING ---
 void cariMember() {
+    printf("========================================================================\n");
+    printf("||                       CARI ANGGOTA                                 ||\n");
+    printf("========================================================================\n");
     char keyword[50];
     int found = 0;
     printf("Masukkan Nama yang dicari: ");
     scanf(" %[^\n]s", keyword);
 
-    printf("\nHasil Pencarian:\n");
+    printf("\n======================= Hasil Pencarian ==============================\n");
     for (int i = 0; i < jumlahMember; i++) {
         if (strstr(daftarMember[i].nama, keyword) != NULL) {
             printf("ID: %d | Nama: %s | Telp: %s | Exp: %s\n", 
@@ -228,26 +233,35 @@ void cariMember() {
             found = 1;
         }
     }
-    if (!found) printf("Tidak ditemukan.\n");
+    if (!found) printf("========== Data Tidak Ditemukan ===========\n");
 }
 
 void urutkanMember() {
-    for (int i = 0; i < jumlahMember - 1; i++) {
+    printf("========================================================================\n");
+    printf("||                       URUTKAN ANGGOTA                               ||\n");
+    printf("========================================================================\n");
+ for (int i = 0; i < jumlahMember - 1; i++) {
         for (int j = 0; j < jumlahMember - i - 1; j++) {
-            if (strcmp(daftarMember[j].nama, daftarMember[j+1].nama) > 0) {
+            
+            // PERUBAHAN DISINI: Bandingkan integer usia, bukan string nama
+            if (daftarMember[j].usia > daftarMember[j+1].usia) {
+                
+                // Tukar Posisi (Swap)
                 Member temp = daftarMember[j];
                 daftarMember[j] = daftarMember[j+1];
                 daftarMember[j+1] = temp;
             }
         }
     }
-    printf("Data berhasil diurutkan berdasarkan Nama.\n");
     tampilkanSemuaMember();
 }
 
 // --- FITUR KHUSUS ---
 void cekKadaluarsa() {
     char today[11];
+    printf("========================================================================\n");
+    printf("||                       CEK STATUS KEDALUWARSA                        ||\n");
+    printf("========================================================================\n");
     printf("Masukkan Tanggal Hari Ini (YYYY-MM-DD): ");
     scanf("%s", today);
 
@@ -279,9 +293,11 @@ void rekapKeuangan() {
         }
     }
 
-    printf("\n--- Rekap Keuangan ---\n");
-    printf("Pemasukan Member Harian  : Rp %ld\n", totalHarian);
-    printf("Pemasukan Member Bulanan : Rp %ld\n", totalBulanan);
-    printf("------------------------------\n");
-    printf("TOTAL PEMASUKAN GYM      : Rp %ld\n", total);
+    printf("========================================================================\n");
+    printf("||                         LAPORAN KEUANGAN                           ||\n");
+    printf("========================================================================\n");
+    printf("PEMASUKAN MEMBER HARIAN  : Rp %ld\n", totalHarian);
+    printf("PEMASUKAN MEMBER BULANAN : Rp %ld\n", totalBulanan);
+    printf("========================================================================\n");
+    printf("TOTAL PEMASUKAN FITNESS     : Rp %ld\n", total);
 }
