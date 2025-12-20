@@ -29,16 +29,14 @@ extern int jumlahMember;
 void loadData();
 void saveData();
 
-// Helper Date
+// fungsi tanggal otoamatis
 void hitungTanggalOtomatis(char *tglMulai, char *tglHasil, int jumlahHari);
 
-// CRUD
+// fungsi untuk setiap Fitur
 void tambahMember();
 void tampilkanSemuaMember();
 void updateMember();
 void hapusMember();
-
-// Fitur Tambahan
 void cariMember();         
 void urutkanMember();      
 void cekKadaluarsa();      

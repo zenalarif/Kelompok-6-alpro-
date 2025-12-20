@@ -28,13 +28,12 @@ void hitungTanggalOtomatis(char *tglMulai, char *tglHasil, int jumlahHari) {
     sprintf(tglHasil, "%04d-%02d-%02d", t.tm_year + 1900, t.tm_mon + 1, t.tm_mday);
 }
 
-// --- FILE HANDLING ---
+// file handling
 void loadData() {
     FILE *fp = fopen(NAMAFILE, "r");
     if (fp == NULL) return;
 
     jumlahMember = 0;
-    // Format baca disesuaikan dengan struct baru
     while (fscanf(fp, "%d|%49[^|]|%14[^|]|%d|%19[^|]|%10[^|]|%10[^|]|%ld\n", 
            &daftarMember[jumlahMember].id, 
            daftarMember[jumlahMember].nama, 
@@ -70,7 +69,6 @@ void saveData() {
     printf("Data berhasil disimpan ke %s.\n", NAMAFILE);
 }
 
-// --- CRUD ---
 void tambahMember() {
     if (jumlahMember >= MEMBERMAKS) {
         printf("Kapasitas penuh!\n");
@@ -212,7 +210,7 @@ void hapusMember() {
     if (!found) printf("ID tidak ditemukan.\n");
 }
 
-// --- SEARCHING & SORTING ---
+// searching
 void cariMember() {
     printf("========================================================================\n");
     printf("||                       CARI ANGGOTA                                 ||\n");
@@ -236,17 +234,16 @@ void cariMember() {
     if (!found) printf("========== Data Tidak Ditemukan ===========\n");
 }
 
+//shorting
 void urutkanMember() {
     printf("========================================================================\n");
     printf("||                       URUTKAN ANGGOTA                               ||\n");
     printf("========================================================================\n");
  for (int i = 0; i < jumlahMember - 1; i++) {
         for (int j = 0; j < jumlahMember - i - 1; j++) {
-            
-            // PERUBAHAN DISINI: Bandingkan integer usia, bukan string nama
-            if (daftarMember[j].usia > daftarMember[j+1].usia) {
-                
-                // Tukar Posisi (Swap)
+            if (daftarMember[j].usia > daftarMember[j+1].usia) {   
+
+                // Tukar Posisi
                 Member temp = daftarMember[j];
                 daftarMember[j] = daftarMember[j+1];
                 daftarMember[j+1] = temp;
@@ -256,7 +253,6 @@ void urutkanMember() {
     tampilkanSemuaMember();
 }
 
-// --- FITUR KHUSUS ---
 void cekKadaluarsa() {
     char today[11];
     printf("========================================================================\n");
