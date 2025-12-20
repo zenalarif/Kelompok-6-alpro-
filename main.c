@@ -20,7 +20,7 @@ int main() {
         printf("||  [0] KELUAR                                         ||\n");
         printf("========================================================\n");
         printf("||                 JUNISA FITNESS                      ||\n");
-        printf("========================================================\n\n");
+        printf("========================================================\n");
         printf("PILIH MENU : ");
         scanf("%d", &pilihan);
 
@@ -33,7 +33,7 @@ int main() {
             case 6: hapusMember(); break;
             case 7: cekKadaluarsa(); break;
             case 8: rekapKeuangan(); break;
-            case 0: printf("Aplikasi ditutup.\n"); break;
+            case 0: printf("============== APLIKASI DITUTUP ============\n"); break;
             default: printf("Pilihan tidak valid.\n");
         }
     } while (pilihan != 0);
