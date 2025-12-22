@@ -6,7 +6,7 @@
 #include <string.h>
 #include <time.h> // Library manipulasi tanggal otomatis
 
-#define MEMBERMAKS 100
+#define MEMBERMAKS 10000
 #define NAMAFILE "dataFitnes.txt"
 
 // Struktur Data
