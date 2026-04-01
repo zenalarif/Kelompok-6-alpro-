@@ -1,5 +1,6 @@
 #include "header.h"
 
+
 int main() {
     int pilihan;
     loadData(); // Load data dari file saat program start
@@ -38,5 +39,6 @@ int main() {
         }
     } while (pilihan != 0);
 
+    printf("HELLO WORLD");
     return 0;
 }
